@@ -105,3 +105,66 @@ window.addEventListener('scroll', () => {
       }
   })
 })
+
+// Responsive navigation menu toggle]
+const menuBtn = document.querySelector('.nav-menu-btn')
+const closeBtn = document.querySelector('.nav-close-btn')
+const navigation = document.querySelector('.navigation')
+const navItems = document.querySelectorAll(".nav-items a")
+
+menuBtn.addEventListener( 'click', () => {
+  navigation.classList.add('active')
+});
+closeBtn.addEventListener( 'click', () => {
+  navigation.classList.remove('active')
+});
+
+navItems.forEach((navItem) => {
+  navItem.addEventListener('click', () => {
+    navigation.classList.remove('active')
+  });
+})
+
+// Typewriter Effect
+var app = document.getElementById("app")
+
+var typewriter = new Typewriter(app, {
+  loop: true,
+})
+
+typewriter
+  .typeString("UX/UI Designer")
+  .pauseFor(2500)
+  .deleteAll()
+  .typeString("Front-End Dev")
+  .pauseFor(2500)
+  .deleteAll()
+  .typeString("Multimedia Producer")
+  .pauseFor(2500)
+  .start()
+
+
+// Scroll Reveal
+ScrollReveal({
+  // reset: true,
+  distance: '60px',
+  duration: 2500,
+  delay: 100
+})
+
+ScrollReveal().reveal(".home .info h2, .section-title-01, .section-title-02", {
+  delay: 500,
+  origin: "left",
+})
+ScrollReveal().reveal(".home .info h3, .home .info p, .about-info .btn", {
+  delay: 600,
+  origin: "right",
+})
+ScrollReveal().reveal('.home .info .btn', {delay: 700, origin: 'bottom'})
+ScrollReveal().reveal('.media-icons i, .contact-left li', {delay: 500, origin: 'left', interval: 200})
+ScrollReveal().reveal('.home-img, .about-img', {delay: 500, origin: 'bottom'})
+ScrollReveal().reveal('.about .description, .contact-right', {delay: 600, origin: 'right'})
+ScrollReveal().reveal('.about .professional-list li', {delay: 500, origin: 'right', interval: 200})
+ScrollReveal().reveal('.skills-description, .services-description, .contact-card, .contact-left h2', {delay: 700, origin: 'left'})
+ScrollReveal().reveal('.experience-card, .service-card, .education, .portfolio .img-card', {delay: 800, origin: 'bottom', interval: 200})
+ScrollReveal().reveal('footer .group', {delay: 500, origin: 'top', interval: 200})
