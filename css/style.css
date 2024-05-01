@@ -700,13 +700,27 @@ header.sticky .nav-bar {
 .portfolio-modal-body{
   position: relative;
   background: var(--modal-bg-color);
-  max-width: 600px;
+  max-width: 700px;
   margin: 20px;
   padding: 40px;
   border-radius: 10px;
   box-shadow: var(--box-shaddow);
   transform: translateY(-50px);
   transition: .5s ease;
+}
+
+.prototype{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.prototype a{
+  list-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--hover-color);
 }
 
 .portfolio-modal.active .portfolio-modal-body{
@@ -1156,6 +1170,10 @@ footer .footer-container{
 
 .contact-card .contact-btn .btn{
   font-size: 0.8rem;
+}
+
+.prototype{
+  display: grid;
 }
 }
 
